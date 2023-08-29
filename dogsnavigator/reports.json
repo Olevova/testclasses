@@ -1,0 +1,222 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-08-29T07:14:02.138Z",
+    "end": "2023-08-29T07:14:10.047Z",
+    "duration": 7909,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6d09fc75-4a2e-4667-8689-126e672f131e",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "78f0d941-7f74-4519-bd40-02049b189d37",
+          "title": "loggin",
+          "fullFile": "C:\\terenbro\\testclasses\\test\\login.test.js",
+          "file": "\\test\\login.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"loggin\"",
+              "fullTitle": "loggin \"before each\" hook in \"loggin\"",
+              "timedOut": false,
+              "duration": 1617,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const driver = await createWebDriver();",
+              "err": {},
+              "uuid": "31bd1f4b-d3b3-4233-8094-afed9a165e8e",
+              "parentUUID": "78f0d941-7f74-4519-bd40-02049b189d37",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"loggin\"",
+              "fullTitle": "loggin \"after each\" hook in \"loggin\"",
+              "timedOut": false,
+              "duration": 414,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "d4a4e08b-b3e8-47e9-bcab-29128ae127ff",
+              "parentUUID": "78f0d941-7f74-4519-bd40-02049b189d37",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "loggin in to the home page",
+              "fullTitle": "loggin loggin in to the home page",
+              "timedOut": false,
+              "duration": 1930,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const logginPageTest = new LoginPage(driver);\nawait logginPageTest.openLoginForm();\nawait logginPageTest.fillPhoneInput(phone);\nawait logginPageTest.fillPasswordInput(password);\nawait logginPageTest.login();\nmakeScreenshot(driver, 'homepage');",
+              "err": {},
+              "uuid": "14285cfb-7bbb-4aaa-82e1-665ee2ab0570",
+              "parentUUID": "78f0d941-7f74-4519-bd40-02049b189d37",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "14285cfb-7bbb-4aaa-82e1-665ee2ab0570"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1930,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "6e5647d4-580a-4cf7-8470-30cecb1e2c2f",
+          "title": "registretion of new User",
+          "fullFile": "C:\\terenbro\\testclasses\\test\\register.test.js",
+          "file": "\\test\\register.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"registretion of new User\"",
+              "fullTitle": "registretion of new User \"before each\" hook in \"registretion of new User\"",
+              "timedOut": false,
+              "duration": 959,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await createWebDriver();",
+              "err": {},
+              "uuid": "8be725e4-c413-46db-be4f-26dcbdf286f2",
+              "parentUUID": "6e5647d4-580a-4cf7-8470-30cecb1e2c2f",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"registretion of new User\"",
+              "fullTitle": "registretion of new User \"after each\" hook in \"registretion of new User\"",
+              "timedOut": false,
+              "duration": 210,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "84a572ae-f2d1-46e4-af02-00bf54dc5a1b",
+              "parentUUID": "6e5647d4-580a-4cf7-8470-30cecb1e2c2f",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "success registretion of new User",
+              "fullTitle": "registretion of new User success registretion of new User",
+              "timedOut": false,
+              "duration": 2764,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const registerTest = new RegisterPage(driver);\n    await registerTest.openRegisterForm();\n    await registerTest.fillDogsNameInput(dogname);\n    await registerTest.fillNameInput(name);\n    await registerTest.fillPasswordInput(password);\n    await registerTest.fillPhoneInput(phone);\n    await registerTest.regiter();\n\n    // make audit of registretion\n    await driver.wait(until.urlMatches(/.+/), 3000);\n    const afterRegistrationUrl = await driver.getCurrentUrl();\n\n    if(afterRegistrationUrl!==successRegistrationUrl){\n      await driver.wait(until.elementLocated(By.className(\"error\")),3000);\n      makeScreenshot(driver, 'register_error');\n    };\n\n    afterRegistrationUrl.should.to.equal(successRegistrationUrl);",
+              "err": {
+                "message": "AssertionError: expected 'https://dogsnavigator.com.ua/login' to equal 'https://dogsnavigator.com.ua/'",
+                "estack": "AssertionError: expected 'https://dogsnavigator.com.ua/login' to equal 'https://dogsnavigator.com.ua/'\n    at Context.<anonymous> (test\\register.test.js:44:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+                "diff": "- https://dogsnavigator.com.ua/login\n+ https://dogsnavigator.com.ua/\n"
+              },
+              "uuid": "9de065cb-2a1e-4fc4-809f-2583eea9ae5f",
+              "parentUUID": "6e5647d4-580a-4cf7-8470-30cecb1e2c2f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9de065cb-2a1e-4fc4-809f-2583eea9ae5f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2764,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "reports",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "dogsnavigator",
+        "reportFilename": "reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
