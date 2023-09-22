@@ -9,6 +9,7 @@ async function createWebDriver(){
 
    return driver = await new Builder()
       .forBrowser("chrome")
+      .usingServer("http://localhost:4444/wd/hub/")
       .setChromeOptions(options)
       .build();
 };
